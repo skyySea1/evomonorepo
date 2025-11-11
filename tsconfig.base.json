@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "nodenext",
+    "noEmit": true,
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@web": ["apps/web/*"]
+    }
+  }
+}

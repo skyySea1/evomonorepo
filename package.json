@@ -1,21 +1,44 @@
 {
-  "name": "evomonorepo",
+  "name": "new-monorepo",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
   "private": true,
-   "type": "module",
+  "type": "module",
   "engines": {
     "node": ">=22.12.0"
   },
-  "workspaces": [
-    "./packages/*",
-    "apps/*"
-  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -r --filter \"./apps/**\" dev",
+    "build": "pnpm -r --filter \"./apps/**\" build",
+    "type-check": "pnpm -r type-check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.18.3"
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "^24.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-vue": "^10.5.1",
+    "jiti": "^2.6.1",
+    "npm-run-all2": "^8.0.4",
+    "prettier": "3.6.2",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-checker": "^0.11.0",
+    "vite-plugin-vue-devtools": "^8.0.3",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  }
 }
