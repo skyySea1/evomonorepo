@@ -8,7 +8,6 @@ import checker from 'vite-plugin-checker'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools(), checker({ vueTsc: true })],
-  optimizeDeps: {},
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -17,7 +16,7 @@ export default defineConfig({
       '@stores': fileURLToPath(new URL('./src/stores', import.meta.url)),
     },
   },
-  //define o que será servido em dev e prod
+  // defines what will be served in dev and prod
   build: {
     sourcemap: true,
     rollupOptions: {

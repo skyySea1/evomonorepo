@@ -15,8 +15,6 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@web": ["apps/web/*"]
-    }
+    // "paths" mapping for '@web' removed; define it in apps/web/tsconfig.json if needed
   }
 }
